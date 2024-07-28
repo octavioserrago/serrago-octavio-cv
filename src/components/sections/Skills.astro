@@ -10,6 +10,7 @@ import GitHub from "../../icons/GitHub.astro";
 import Tailwind from "../../icons/tailwind.astro";
 import Swift from "../../icons/swift.astro";
 import SwiftUI from "../../icons/swiftui.astro";
+import Express from "../../icons/Express.astro";
 
 const SKILLS_ICONS: Record<string, any> = {
     HTML,
@@ -17,6 +18,7 @@ const SKILLS_ICONS: Record<string, any> = {
     JavaScript,
     React,
     MySQL,
+    Express,
     Git,
     GitHub,
     Tailwind,
@@ -30,6 +32,7 @@ const skills = [
     { name: "JavaScript" },
     { name: "React" },
     { name: "MySQL" },
+    { name: "Express" },
     { name: "Git" },
     { name: "GitHub" },
     { name: "Tailwind" },
@@ -85,12 +88,8 @@ const skills = [
 
     @media (max-width: 700px) {
         .skills-list {
-            flex-direction: column;
+            flex-direction: row;
             align-items: flex-start;
-        }
-
-        .skill-item {
-            width: 100%;
         }
     }
 </style>
