@@ -34,7 +34,7 @@ const certificates = [
                 const endYear =
                     endDate != null
                         ? new Date(endDate).getFullYear()
-                        : "Actual";
+                        : "Current";
                 const years = `${startYear} - ${endYear}`;
 
                 return (
@@ -65,7 +65,7 @@ const certificates = [
                 const endYear =
                     endDate != null
                         ? new Date(endDate).getFullYear()
-                        : "Actual";
+                        : "Current";
                 const years = `${startYear} - ${endYear}`;
 
                 return (
@@ -103,7 +103,8 @@ const certificates = [
         --color-background: #000;
     }
 
-    ul {
+    ul,
+    div {
         display: flex;
         flex-direction: column;
         gap: 10px;

@@ -4,6 +4,24 @@ import Section from "../Section.astro";
 
 const projects = [
     {
+        url: "https://github.com/octavioserrago/veronaApp",
+        description:
+            "This is a comprehensive management system designed for a marble company, featuring multi-user capabilities to oversee all sales and economic indicators of the business. The frontend is developed using React, while the backend is built with Express. The database utilized is MySQL.",
+        highlights: [
+            "MySQL integration",
+            "Client portfolio management",
+            "Sales supervision",
+            "Credit card income analysis",
+            "Cash flow management",
+            "API calls",
+            "Express",
+            "Javascript",
+        ],
+        name: "VeronaApp",
+        isActive: true,
+        github: "https://github.com/octavioserrago",
+    },
+    {
         url: "https://github.com/octavioserrago/veronaApp-OLD-",
         description:
             "Initially developed for a university course and continued at my company. Used Java and JavaFX with various libraries, faced deployment challenges, and now planned to renew as a web application.",
@@ -15,7 +33,7 @@ const projects = [
             "Cash flow management",
             "Java",
         ],
-        name: "VeronaApp",
+        name: "VeronaApp-(OLD)",
         isActive: false,
         github: "https://github.com/octavioserrago/veronaApp-OLD-",
     },
@@ -67,7 +85,7 @@ const projects = [
 ];
 ---
 
-<Section title="Proyectos">
+<Section title="Proyects">
     <ul>
         {
             projects.map(
