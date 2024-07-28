@@ -1,0 +1,164 @@
+---
+import Section from "../Section.astro";
+
+const education = [
+    {
+        institution: "Escuela Da Vinci",
+        startDate: "2022-06-01",
+        endDate: null,
+        area: "Systems Analyst",
+    },
+];
+
+const certificates = [
+    {
+        institution: "Cambridge English (Lvl. B2)",
+        startDate: "2020-01-01",
+        endDate: "2020-01-01",
+        area: "First Certificate in English (FCE)",
+    },
+    {
+        institution: "Coderhouse",
+        startDate: "2022-02-01",
+        endDate: "2022-06-01",
+        area: "Web Development",
+    },
+];
+---
+
+<Section title="Education">
+    <ul>
+        {
+            education.map(({ institution, startDate, endDate, area }) => {
+                const startYear = new Date(startDate).getFullYear();
+                const endYear =
+                    endDate != null
+                        ? new Date(endDate).getFullYear()
+                        : "Actual";
+                const years = `${startYear} - ${endYear}`;
+
+                return (
+                    <li>
+                        <article>
+                            <header>
+                                <div>
+                                    <h3>{institution}</h3>
+                                </div>
+                                <time>{years}</time>
+                            </header>
+                            <footer>
+                                <p>{area}</p>
+                            </footer>
+                        </article>
+                    </li>
+                );
+            })
+        }
+    </ul>
+</Section>
+
+<Section title="Certificates">
+    <ul>
+        {
+            certificates.map(({ institution, startDate, endDate, area }) => {
+                const startYear = new Date(startDate).getFullYear();
+                const endYear =
+                    endDate != null
+                        ? new Date(endDate).getFullYear()
+                        : "Actual";
+                const years = `${startYear} - ${endYear}`;
+
+                return (
+                    <li>
+                        <article>
+                            <header>
+                                <div>
+                                    <h3>{institution}</h3>
+                                </div>
+                                <time>{years}</time>
+                            </header>
+                            <footer>
+                                <p>{area}</p>
+                            </footer>
+                        </article>
+                    </li>
+                );
+            })
+        }
+    </ul>
+</Section>
+
+<style>
+    :root {
+        --color-primary: #111;
+        --color-secondary: grey;
+        --color-accent: #555;
+        --color-background: #fff;
+    }
+
+    [data-theme="dark"] {
+        --color-primary: #ddd;
+        --color-secondary: #aaa;
+        --color-accent: #888;
+        --color-background: #000;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    article {
+        border-radius: 8px;
+        border: 1px solid var(--color-accent);
+        padding: 16px;
+        background: var(--color-background);
+        display: flex;
+        flex-direction: column;
+    }
+
+    article h3 {
+        font-weight: 500;
+        color: var(--color-primary);
+        margin: 0;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4px;
+    }
+
+    time {
+        color: var(--color-accent);
+        font-size: 0.85rem;
+        min-width: 102px;
+        text-align: right;
+    }
+
+    footer {
+        color: var(--color-secondary);
+        margin-top: 4px; /* Reduce space between header and footer */
+    }
+
+    @media (max-width: 700px) {
+        header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        time {
+            align-self: flex-end;
+            margin-top: 4px;
+        }
+    }
+</style>
