@@ -1,0 +1,111 @@
+<script>
+    const handleKeyDown = (event) => {
+        console.log("Keyboard event detected:", event);
+
+        if (event.shiftKey && event.key === "T") {
+            event.preventDefault();
+
+            const pdfUrl = "/serrago-octavio-cv.pdf";
+
+            const link = document.createElement("a");
+            link.href = pdfUrl;
+            link.download = "serrago-octavio-cv.pdf";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    const cleanUp = () => {
+        document.removeEventListener("keydown", handleKeyDown);
+    };
+
+    export default cleanUp;
+</script>
+
+<footer id="normal-footer" class="no-print">
+    Press <kbd>Shift</kbd> + <kbd>T</kbd> to download the CV or click the button
+    below
+    <button
+        id="download-btn"
+        class="download-btn"
+        onclick="
+        const pdfUrl = '/serrago-octavio-cv.pdf';
+        const link = document.createElement('a');
+        link.href = pdfUrl;
+        link.download = 'serrago-octavio-cv.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    "
+        >Download</button
+    >
+</footer>
+
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @media (min-width: 601px) {
+        #normal-footer {
+            display: block;
+        }
+    }
+
+    @media (max-width: 600px) {
+        #normal-footer {
+            display: block;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: #fff;
+            border: 1px solid #eee;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    footer {
+        background: #fdfdfd;
+        border-top: 1px solid #eee;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 8px;
+        text-align: center;
+        font-size: 0.85rem;
+
+        animation: linear 0.3s fadeIn;
+    }
+
+    kbd {
+        background: #eee;
+        border-radius: 4px;
+        padding: 2px 4px;
+        font-size: 12px;
+    }
+
+    .download-btn {
+        background: none;
+        border: none;
+        color: #007bff;
+        font-size: 0.85rem;
+        cursor: pointer;
+        text-decoration: underline;
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    .download-btn:hover {
+        color: #0056b3;
+    }
+</style>
