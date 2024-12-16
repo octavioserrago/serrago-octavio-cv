@@ -4,83 +4,52 @@ import Section from "../Section.astro";
 
 const projects = [
     {
-        url: "https://github.com/octavioserrago/veronaApp",
+        url: "https://marmoleriaverona.com.ar",
         description:
-            "This is a comprehensive management system designed for a marble company, featuring multi-user capabilities to oversee all sales and economic indicators of the business. The frontend is developed using React, while the backend is built with Express. The database utilized is MySQL.",
+            "Complete redesign of the Marmolería Verona website, which previously only displayed limited information about colors, some of which were out of stock but still offered. New materials, which were previously not showcased, have now been added to the site. The entire user interface (UI) of the catalog, materials, and display was revamped with a focus on accessibility and enhancing the user experience. Additionally, the best-selling sinks, which were not previously available on the website, are now featured. Significant improvements in SEO were achieved, along with a 75% reduction in deployment costs, eliminating the need for costly annual maintenance by opting for more efficient solutions.",
         highlights: [
-            "MySQL integration",
-            "Client portfolio management",
-            "Sales supervision",
-            "Credit card income analysis",
-            "Cash flow management",
-            "API calls",
-            "Express",
-            "Javascript",
+            "Complete website redesign",
+            "Updated catalog with new materials and best-selling sinks",
+            "Significant SEO improvements",
+            "75% reduction in deployment costs",
+            "Full UI overhaul",
+        ],
+        name: "Verona Web Page",
+        isActive: false,
+        github: "https://github.com/octavioserrago",
+    },
+    {
+        url: null,
+        description:
+            "Verona API is a robust API built with Express, designed to handle various aspects of business operations, including sales, users, sinks, Blueprints, Blueprint images, and other related data. The API is secured with JSON Web Tokens (JWT) to ensure safe and authorized access to endpoints, and user passwords are securely hashed using bcrypt. The database is powered by MySQL, providing reliable storage and efficient querying of business-critical data. Currently in the testing phase, the API is fully deployed and, as a result, has achieved a 100% reduction in deployment costs by utilizing cost-effective solutions. Due to security reasons, the project is not publicly available on GitHub or via a public URL.",
+        highlights: [
+            "Built with Express.js",
+            "JWT-based security for authentication",
+            "User passwords securely hashed with bcrypt",
+            "Routes for managing sales, users, sinks, Blueprints, and images",
+            "MySQL database for reliable data storage",
+            "Focus on secure and efficient data handling",
+            "Fully deployed with a 100% reduction in deployment costs",
+        ],
+        name: "Verona API",
+        isActive: true,
+        github: null,
+    },
+    {
+        url: null,
+        description:
+            "Verona App is the frontend application that works in conjunction with Verona API. Built primarily with React and Axios for making secure API calls, it provides users with an intuitive interface for managing and interacting with business data. Users can view sales data, update their credentials, and track the status of production related to plans in each sale. The app offers a variety of features aimed at streamlining operations and improving user experience. Additionally, by leveraging cost-effective deployment solutions, Verona App has achieved a 100% reduction in deployment costs. Due to security reasons, the project is not publicly available on GitHub or via a public URL.",
+        highlights: [
+            "Frontend built with React",
+            "Secure API calls using Axios",
+            "User management with credential updates",
+            "Sales data display and production tracking for related plans",
+            "Fully deployed with a 100% reduction in deployment costs",
+            "Streamlined user experience with various interactive features",
         ],
         name: "VeronaApp",
         isActive: true,
-        github: "https://github.com/octavioserrago",
-    },
-    {
-        url: "https://github.com/octavioserrago/veronaApp-OLD-",
-        description:
-            "Initially developed for a university course and continued at my company. Used Java and JavaFX with various libraries, faced deployment challenges, and now planned to renew as a web application.",
-        highlights: [
-            "MySQL integration",
-            "Client portfolio management",
-            "Sales supervision",
-            "Credit card income analysis",
-            "Cash flow management",
-            "Java",
-        ],
-        name: "VeronaApp-(OLD)",
-        isActive: false,
-        github: "https://github.com/octavioserrago/veronaApp-OLD-",
-    },
-    {
-        url: "https://github.com/octavioserrago/veronaWebPage",
-        description:
-            "Updated web page to display materials, colors, work samples, and catalogs.",
-        highlights: [
-            "SEO rates Improved",
-            "Built with Astro",
-            "Materials and Colors Display",
-            "Tailwind CSS",
-            "Work Samples",
-            "Best-selling Sinks Catalog",
-            "Complete Supplier Catalog",
-        ],
-        name: "VeronaWebPage",
-        isActive: false,
-        github: "https://github.com/octavioserrago",
-    },
-    {
-        url: "https://github.com/octavioserrago/dolarTarjetaSimple",
-        description:
-            "Web app to calculate final price of international purchases in Argentine pesos with added taxes and bank charges.",
-        highlights: [
-            "Real-time API call for current card dollar rate",
-            "Tailwind CSS",
-            "CSS",
-            "Javascript",
-        ],
-        name: "Dolar Tarjeta Simple",
-        isActive: true,
-        github: "https://github.com/octavioserrago/dolarTarjetaSimple",
-    },
-    {
-        url: "https://github.com/octavioserrago/GymPro",
-        description:
-            "iOS app to track gym routines, exercises, repetitions, and weights. Created for learning Swift and SwiftUI.",
-        highlights: [
-            "Developed with Swift and SwiftUI",
-            "CoreData integration",
-            "Workout routine tracking",
-            "Exercise, repetition, and weight management",
-        ],
-        name: "GymPro",
-        isActive: true,
-        github: "https://github.com/octavioserrago/GymPro",
+        github: null,
     },
 ];
 ---
